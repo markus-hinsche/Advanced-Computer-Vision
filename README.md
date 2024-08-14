@@ -1,4 +1,4 @@
-# Advanced Computer Vision - DSR Feb 2024
+# Advanced Computer Vision
 
 
 ## Computer Vision with TensorFlow
