@@ -1,8 +1,6 @@
 from IPython.display import HTML as html_print
-from tensorflow.keras.layers import Input, AveragePooling2D, Dense, Flatten, Dense
+from tensorflow.keras.layers import Conv2D, Dropout, Input, AveragePooling2D, Dense, Flatten, Dense
 from tensorflow.keras.models import Model
-from tensorflow.python.keras.layers.convolutional import Conv2D
-from tensorflow.python.keras.layers.core import Dropout
 
 def colored_string(s, color='black'):
     return "<text style=color:{}>{}</text>".format(color, s)
@@ -15,7 +13,7 @@ def TEST_INCEPTIONBLOCK(InceptionBlock):
     else:
         return html_print(colored_string("IMPLEMENTATION IS NOT CORRECT", "red"))
 
-
+from tensorflow import keras
 
 def TEST_AUXILARY(AuxilaryClassifier):
     inputs = Input(shape = (10, 10, 1))
@@ -33,7 +31,7 @@ def TEST_AUXILARY(AuxilaryClassifier):
         aux_test = False
         return html_print(colored_string("FIRST LAYER SHOULD BE AveragePooling2D", "red"))
 
-    if not type(layers[2]) == Conv2D:
+    if not isinstance(layers[2], Conv2D):
         aux_test = False
         return html_print(colored_string("SECOND LAYER SHOULD BE Conv2D", "red"))
 
