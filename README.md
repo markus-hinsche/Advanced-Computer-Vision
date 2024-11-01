@@ -1,10 +1,8 @@
 # Advanced Computer Vision
 
-
 ## Computer Vision with TensorFlow
-<br>
-## Part 1:
 
+## Part 1
 
 **Planned topics**
 - GoogleNet project
