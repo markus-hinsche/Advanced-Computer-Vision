@@ -2,7 +2,7 @@ focal-loss
 ipython
 numpy
 opencv-contrib-python
-tensorflow-gpu
+tensorflow
 matplotlib
 tqdm
 scikit-learn
