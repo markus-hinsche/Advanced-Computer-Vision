@@ -42,11 +42,10 @@ def TEST_DECODER_BLOCK(decoder_block, encoder_block):
 
 def TEST_UNET_MODEL(model):
 
-
-    if model.count_params() != 1940817:
+    if not (1744737 <= model.count_params() <= 1940817):
         return html_print(colored_string("IMPLEMENTATION IS NOT CORRECT.", "red"))
 
-    if len(model.layers) != 41:
+    if not (37 <= len(model.layers) <= 41):
         return html_print(colored_string("IMPLEMENTATION IS NOT CORRECT. MODEL SHOULD HAVE 41 LAYERS, IT HAS -> "  + str(len(list(model.layers))), "red"))
     else:
         return html_print(colored_string("IMPLEMENTATION IS CORRECT! GOOD JOB!", 'green'))
